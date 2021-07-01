@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import Header from './Components/Header';
+import Hero from './Components/Hero';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import img1 from '../src/img/img3.jpg';
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            img: img1
+        }
+    }
+    
+    onChangeImg = (img) => {
+        this.setState({
+            img: img
+        })
+    }
+
+    render() {
+        return (
+            <div className="app">
+                <Header />
+                <Hero img={this.state.img} setImg={this.onChangeImg} />
+            </div>
+        )
+    }
 }
 
 export default App;

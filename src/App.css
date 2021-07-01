@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+li {
+    list-style-type: none;
+}
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+}
+.col-6 {
+    width: 50%;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    padding: 15px 0;
+    background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .row {
+    justify-content: space-between;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    font-size: 30px;
+    color: #0099ff;
+    font-weight: bold;
+}
+.menu {
+    display: flex;
+    text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+.menu li a {
+    display: inline-block;
+    font: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555555;
+    margin-right: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero {
+    padding: 100px 0;
+    background-color: #ddd;
+}
+
+.hero .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h3 {
+    color: #333333;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.hero span {
+    color: #333333;
+    font-size: 20px;
+}
+
+.hero .img-gallery {
+    width: 400px;
+    height: 500px;
+    border: 10px solid tomato;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero .img-gallery img {
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.pagi {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.pagi span {
+    display: inline-block;
+    padding: 5px;
+    border-bottom: 3px solid tomato;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: .5s ease-in-out;
+}
+
+@keyframes anima {
+    0% {
+        transform: translate(0, 100%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
